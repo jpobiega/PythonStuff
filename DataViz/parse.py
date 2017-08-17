@@ -1,7 +1,7 @@
 import csv
 
 # Put the full path to your CSV/Excel file here
-MY_FILE = "../data/sample_sfpd_incident_all.csv"
+MY_FILE = "../data/nba stats 16-17.csv"
 
 def parse(raw_file, delimiter):
     """ Parses a raw CSV file to a JSON-line object"""
