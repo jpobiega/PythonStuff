@@ -1,11 +1,10 @@
 import csv
 
 # Put the full path to your CSV/Excel file here
-MY_FILE = "../data/nba_stats_16-17.csv"
+MY_FILE = "data/nba_stats_16-17.csv"
 
 def parse(raw_file, delimiter):
     """ Parses a raw CSV file to a JSON-line object"""
-
     # Open CSV file
     opened_file = open(raw_file)
 
@@ -15,7 +14,7 @@ def parse(raw_file, delimiter):
     # Build a data structure to return parsed_data
     parsed_data = []
 
-    fields = csv_data.next()
+    fields = next(csv_data)
 
     for row in csv_data:
         parsed_data.append(dict(zip(fields, row)))
